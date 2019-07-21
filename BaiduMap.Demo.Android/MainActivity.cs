@@ -1,6 +1,4 @@
-﻿using System;
-using Android;
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
@@ -12,12 +10,17 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using Com.Baidu.Mapapi;
 using Com.Baidu.Mapapi.Map;
+using Com.Baidu.Mapapi.Model;
+using System;
+using static Com.Baidu.Mapapi.Map.BaiduMap;
 
 namespace BaiduMap.Demo.Android
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
+    public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener, IOnMapLoadedCallback
     {
+        MapView Map;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -40,7 +43,59 @@ namespace BaiduMap.Demo.Android
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
 
-            var map = FindViewById<MapView>(Resource.Id.map);
+            Map = FindViewById<MapView>(Resource.Id.map);
+            Map.OnCreate(this, savedInstanceState);
+            Map.Map.SetOnMapLoadedCallback(this);
+        }
+
+        public void OnMapLoaded()
+        {
+            var marker = new MarkerOptions()
+                    .InvokePosition(new LatLng(40.023537, 116.289429))
+                    .InvokeIcon(BitmapDescriptorFactory.FromResource(Resource.Mipmap.ic_launcher))
+                    .InvokeTitle("Title")
+                    .Draggable(true);
+            Map.Map.AddOverlay(marker);
+
+            Map.Map.MarkerClick += (s, e) =>
+            {
+                //e.Handled = true;
+                var m = e.P0;
+                Snackbar.Make(Map, m.Title, Snackbar.LengthShort).Show();
+            };
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+        }
+
+        protected override void OnRestart()
+        {
+            base.OnRestart();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            Map?.OnResume();
+        }
+
+        protected override void OnPause()
+        {
+            Map?.OnPause();
+            base.OnPause();
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+        }
+
+        protected override void OnDestroy()
+        {
+            Map?.OnDestroy();
+            base.OnDestroy();
         }
 
         public override void OnBackPressed()
@@ -113,12 +168,14 @@ namespace BaiduMap.Demo.Android
             drawer.CloseDrawer(GravityCompat.Start);
             return true;
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }
 
