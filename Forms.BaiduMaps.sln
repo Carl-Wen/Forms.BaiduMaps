@@ -7,7 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms.BaiduMaps.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms.BaiduMaps.iOS", "Forms.BaiduMaps\Forms.BaiduMaps.iOS\Forms.BaiduMaps.iOS.csproj", "{D01630CB-7EEF-40DA-A7E6-C1C779387194}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms.BaiduMaps", "Forms.BaiduMaps\Forms.BaiduMaps\Forms.BaiduMaps.csproj", "{B85B4159-5CF1-4CCD-B47B-981400E82820}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forms.BaiduMaps", "Forms.BaiduMaps\Forms.BaiduMaps\Forms.BaiduMaps.csproj", "{B85B4159-5CF1-4CCD-B47B-981400E82820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiduMap.Demo.Android", "BaiduMap.Demo.Android\BaiduMap.Demo.Android.csproj", "{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiduMaps.Binding.Android", "BaiduMaps.Binding.Android\BaiduMaps.Binding.Android.csproj", "{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +77,36 @@ Global
 		{B85B4159-5CF1-4CCD-B47B-981400E82820}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{B85B4159-5CF1-4CCD-B47B-981400E82820}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{B85B4159-5CF1-4CCD-B47B-981400E82820}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Debug|iPhone.Deploy.0 = Debug|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Release|iPhone.Build.0 = Release|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Release|iPhone.Deploy.0 = Release|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{EF7A5EED-3522-4420-B0E9-A1021C2D91D8}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Release|iPhone.Build.0 = Release|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9F94C9AA-B865-465A-A8DD-C7D95A8E779B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
